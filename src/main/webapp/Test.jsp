@@ -12,7 +12,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <title>Jobffer | Sign up part time or get a temporary helper</title>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div class="container">
