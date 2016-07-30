@@ -35,9 +35,9 @@
 </ul>
 </div>
 </div></nav>
-
-  <h1>My First Bootstrap Page</h1>
-  <p>This is some text.</p> 
+<div class="jumbotron text-center">
+  <h1>Jobffer</h1>
+  <p>Job</p> 
 
 </body>
 </html>
