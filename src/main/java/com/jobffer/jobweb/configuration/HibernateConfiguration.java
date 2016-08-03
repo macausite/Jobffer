@@ -14,6 +14,22 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+@Configuration
+@EnableTransactionManagement
+@ComponentScan({"com.jobffer.jobweb.configuration"})
+@PropertySource(value={"classpath:application.properties"})
 public class HibernateConfiguration {
 
+	@Autowired
+	private Environment evniorment;
+	
+	@Bean
+	public LocalSessionFactoryBean sessionFactory() {
+	LocalSessionFactoryBean sessionFactory=new LocalSessionFactoryBean();	
+	sessionFactory.setDataSource(dataSource());
+	sessionFactory.setPackagesToScan(new String[] {"com.jobffer.jobweb.model"});
+	sessionFactory.setHibernateProperties(hibernateProperties());
+	return sessionFactory;
+	}
+	
 }
