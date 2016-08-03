@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class HibernateConfiguration {
 
 	@Autowired
-	private Environment evniorment;
+	private Environment environment;
 	
 	@Bean
 	public LocalSessionFactoryBean sessionFactory() {
@@ -31,5 +31,17 @@ public class HibernateConfiguration {
 	sessionFactory.setHibernateProperties(hibernateProperties());
 	return sessionFactory;
 	}
+	
+	@Bean
+	public DataSource dataSource(){
+		DriverManagerDataSource dataSource =new DriverManagerDataSource();
+		dataSource.setDriverClassName(environment.getRequiredProperty("jdbc.driverClassName"));
+		dataSource.setUrl(environment.getRequiredProperty("jdbc.url"));
+		dataSource.setUsername(environment.getRequiredProperty("jdbc.username"));
+		dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
+		return dataSource;
+	}
+	
+	@Bean
 	
 }
