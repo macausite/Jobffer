@@ -183,19 +183,29 @@ keyframes slide { 0% {
 opacity
 
 
+
+
 :
 
+
  
+
 
 1;
 -webkit-transform
 
 
+
+
 :
+
 
  
 
+
 translateY
+
+
 
 
 (0%);
@@ -212,19 +222,29 @@ translateY
 opacity
 
 
+
+
 :
 
+
  
+
 
 1;
 -webkit-transform
 
 
+
+
 :
+
 
  
 
+
 translateY
+
+
 
 
 (0%);
