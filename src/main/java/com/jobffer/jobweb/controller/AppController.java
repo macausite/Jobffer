@@ -39,7 +39,7 @@ public class AppController {
 			return "registration";
 			
 		}
-	if(!service.isEmployeeSsnUnique(employee.getID(), employee.getName())){
+	if(!service.isEmployeeSsnUnique(employee.getId(), employee.getName())){
 		FieldError ssnError =new FieldError("employee", "ssn", messageSource.getMessage("non.unique.ssn", new String[]{employee.getSsn()}, Locale.getDefault()));
 		result.addError(ssnError);
 		return "registration";
@@ -64,7 +64,7 @@ public class AppController {
 		{
 			return "registration";
 		}
-		if(!service.isEmployeeSsnUnique(employee.getID(), employee/getSsn())){
+		if(!service.isEmployeeSsnUnique(employee.getId(), employee.getSsn())){
 			FieldError ssnError=new FieldError("employee", "ssn", messageSource.getMessage("non.unique.ssn", new String[]{employee.getSsn()}, Locale.getDefault()));
 			result.addError(ssnError);
 			return "registration";
