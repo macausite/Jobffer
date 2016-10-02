@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <title>Jobffer | Sign up part time or get a temporary helper</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel='stylesheet' href='<c:url value="/resources/css/style.css" />' type='text/css' media='all' />
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar"
 	data-offset="60">
